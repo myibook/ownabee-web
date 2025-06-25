@@ -84,7 +84,7 @@ const UIExamplesSection: React.FC = () => {
 
         <div className="bg-background-alt rounded-lg shadow-md overflow-hidden">
           {/* Carousel */}
-          <div className="relative" role="region" aria-roledescription="carousel" aria-label="UI 예시 캐러셀">
+          <div className="relative" role="region" aria-roledescription="carousel" aria-label={t('uiExamples.carousel.ariaLabel')}>
             {/* Slides */}
             <div className="overflow-hidden">
               <div 
@@ -99,7 +99,7 @@ const UIExamplesSection: React.FC = () => {
                     className="w-full flex-shrink-0" 
                     role="tabpanel"
                     aria-roledescription="slide"
-                    aria-label={`${example.title} 예시`}
+                    aria-label={`${example.title} ${t('uiExamples.carousel.screenExample')}`}
                     aria-hidden={activeSlide !== index}
                   >
                     <div className="p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center">
@@ -109,7 +109,7 @@ const UIExamplesSection: React.FC = () => {
                           <div className="relative w-full h-full">
                             <Image 
                               src={example.image} 
-                              alt={`${example.title} 화면 예시`}
+                              alt={t(`uiExamples.example${index + 1}.altText`)}
                               fill
                               sizes="(max-width: 768px) 100vw, 66vw"
                               className="object-contain p-2"
@@ -118,7 +118,7 @@ const UIExamplesSection: React.FC = () => {
                             <div className="absolute inset-0 flex items-center justify-center z-10">
                               <div className="text-center">
                                 <div className="w-8 h-8 sm:w-10 sm:h-10 mx-auto">{example.icon}</div>
-                                <p className="font-semibold mt-2 text-sm sm:text-base bg-white/80 px-2 py-1 rounded">{example.title} 화면</p>
+                                <p className="font-semibold mt-2 text-sm sm:text-base bg-white/80 px-2 py-1 rounded">{example.title} {t('uiExamples.carousel.screenExample')}</p>
                               </div>
                             </div>
                           </div>

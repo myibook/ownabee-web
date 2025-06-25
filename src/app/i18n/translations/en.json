@@ -34,9 +34,13 @@
     "title": "How It Works",
     "description": "Introducing the creative journey children take with Ownabee. Through simple steps, your child's imagination becomes a real book.",
     "step1": "Child shares a story",
+    "step1Description": "The child selects the title and genre of the story they want to create.",
     "step2": "AI generates illustrations",
+    "step2Description": "The child speaks or writes their story directly.",
     "step3": "Audio narration is created",
-    "step4": "Share the finished book"
+    "step3Description": "Select and customize various drawing styles and characters.",
+    "step4": "Share the finished book",
+    "step4Description": "Choose the audiobook voice and design the book cover."
   },
   "audiobook": {
     "title": "AI Voice Synthesis",
@@ -197,25 +201,33 @@
     "title": "User Experience",
     "subtitle": "Designed for children and adults alike",
     "description": "Explore the intuitive interface of Ownabee",
+    "carousel": {
+      "ariaLabel": "UI examples carousel",
+      "screenExample": "screen example"
+    },
     "example1": {
       "title": "Story Creation",
       "description": "Create stories with simple prompts and watch them come to life.",
-      "iconTitle": "Drawing Style Icon"
+      "iconTitle": "Drawing Style Icon",
+      "altText": "Story Creation screen example"
     },
     "example2": {
       "title": "Character Design",
       "description": "Describe characters and see them visualized instantly.",
-      "iconTitle": "Character Description Icon"
+      "iconTitle": "Character Description Icon",
+      "altText": "Character Design screen example"
     },
     "example3": {
       "title": "Audio Narration",
       "description": "Listen to the story with professional-quality narration.",
-      "iconTitle": "Voice Selection and Recording Icon"
+      "iconTitle": "Voice Selection and Recording Icon",
+      "altText": "Audio Narration screen example"
     },
     "example4": {
       "title": "Sharing Options",
       "description": "Easily share completed books with family members and teachers.",
-      "iconTitle": "Sharing Options Icon"
+      "iconTitle": "Sharing Options Icon",
+      "altText": "Sharing Options screen example"
     }
   },
   "roadmap": {
