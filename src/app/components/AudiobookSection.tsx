@@ -139,7 +139,7 @@ const AudiobookSection: React.FC = () => {
                 </div>
                 
                 <p className="text-center text-xs sm:text-sm text-text-secondary">
-                  Sorisori AI 기술로 구현된 자연스러운 음성 합성 기술을 체험해보세요.
+                  BeeGM AI 기술로 구현된 자연스러운 음성 합성 기술을 체험해보세요.
                 </p>
               </div>
             </div>
