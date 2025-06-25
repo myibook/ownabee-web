@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Main colors - Updated to match Ownabee's character */
+  --primary: #FFA726;     /* Ownabee Orange - main brand color */
+  --secondary: #FFD54F;   /* Ownabee Yellow - secondary accent */
+  --tertiary: #81C784;    /* Ownabee Green - tertiary color */
+  --accent: #FF7043;      /* Ownabee Accent - highlight accent */
+  --accent-light: #FFECB3; /* Light accent for backgrounds */
+  
+  /* Text colors */
+  --text-primary: #4E342E; /* Warm dark brown */
+  --text-secondary: #795548; /* Medium brown */
+  --text-light: #FFFFFF;
+  
+  /* Background colors */
+  --background: #FFFFFF;
+  --background-alt: #FFF8E1; /* Warm light background */
+  --foreground: #3E2723; /* Dark brown */
+  
+  /* Button colors */
+  --button-primary: #FFA726;
+  --button-secondary: #FF7043;
+  --button-hover: #FB8C00;
+  --button-secondary-hover: #F4511E;
 }
 
-@theme inline {
+/* CSS Variables */
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-fredoka);
+  --font-display-alt: var(--font-baloo);
+  --font-display-third: var(--font-poppins);
+  --font-ui: var(--font-lexend-deca);
+  --font-ui-alt: var(--font-quicksand);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-ui), var(--font-ui-alt), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), var(--font-display-alt), Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  background-color: var(--button-primary);
+  color: white;
+  font-family: var(--font-display-alt), sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover);
+}
+
+.btn-secondary {
+  background-color: var(--button-secondary);
+  color: white;
+  font-family: var(--font-display-alt), sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+/* Section styling */
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background-color: var(--background-alt);
+}
+
+/* Container for responsive design */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
 }

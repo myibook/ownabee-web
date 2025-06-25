@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements -->
+  <circle cx="200" cy="150" r="120" fill="#F5F7FA"/>
+  <circle cx="320" cy="80" r="30" fill="#FFE082" opacity="0.6"/>
+  <circle cx="80" cy="220" r="40" fill="#4C72B0" opacity="0.2"/>
+  
+  <!-- Book stack -->
+  <rect x="120" y="180" width="160" height="30" rx="4" fill="#FF6F61"/>
+  <rect x="130" y="150" width="140" height="30" rx="4" fill="#4C72B0"/>
+  <rect x="140" y="120" width="120" height="30" rx="4" fill="#FFE082"/>
+  
+  <!-- Child figure left -->
+  <circle cx="100" cy="100" r="25" fill="#FF6F61" opacity="0.8"/>
+  <rect x="90" y="125" width="20" height="40" rx="10" fill="#FF6F61" opacity="0.8"/>
+  <rect x="75" y="140" width="15" height="30" rx="5" fill="#FF6F61" opacity="0.8" transform="rotate(-30 75 140)"/>
+  <rect x="110" y="140" width="15" height="30" rx="5" fill="#FF6F61" opacity="0.8" transform="rotate(30 110 140)"/>
+  
+  <!-- Child figure right -->
+  <circle cx="300" cy="100" r="25" fill="#4C72B0" opacity="0.8"/>
+  <rect x="290" y="125" width="20" height="40" rx="10" fill="#4C72B0" opacity="0.8"/>
+  <rect x="275" y="140" width="15" height="30" rx="5" fill="#4C72B0" opacity="0.8" transform="rotate(-30 275 140)"/>
+  <rect x="310" y="140" width="15" height="30" rx="5" fill="#4C72B0" opacity="0.8" transform="rotate(30 310 140)"/>
+  
+  <!-- Bee flying around -->
+  <circle cx="200" cy="70" r="15" fill="#FFE082"/>
+  <path d="M200 60C196.7 60 194 62.7 194 66C194 69.3 196.7 72 200 72C203.3 72 206 69.3 206 66C206 62.7 203.3 60 200 60ZM200 70C197.8 70 196 68.2 196 66C196 63.8 197.8 62 200 62C202.2 62 204 63.8 204 66C204 68.2 202.2 70 200 70Z" fill="#4C72B0"/>
+  <path d="M207 75C205.9 75 205 75.9 205 77C205 78.1 205.9 79 207 79C208.1 79 209 78.1 209 77C209 75.9 208.1 75 207 75Z" fill="#4C72B0"/>
+  <path d="M193 75C191.9 75 191 75.9 191 77C191 78.1 191.9 79 193 79C194.1 79 195 78.1 195 77C195 75.9 194.1 75 193 75Z" fill="#4C72B0"/>
+  <path d="M200 72V80" stroke="#4C72B0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M195 68L191 64" stroke="#4C72B0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M205 68L209 64" stroke="#4C72B0" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Speech bubbles with story elements -->
+  <path d="M150 60C150 54.4772 154.477 50 160 50H180C185.523 50 190 54.4772 190 60V70C190 75.5228 185.523 80 180 80H160C154.477 80 150 75.5228 150 70V60Z" fill="white" stroke="#FF6F61" stroke-width="2"/>
+  <path d="M150 70L140 85L145 70" fill="white" stroke="#FF6F61" stroke-width="2"/>
+  <text x="170" y="70" text-anchor="middle" font-family="Arial" font-size="12" fill="#333333">ABC</text>
+  
+  <path d="M250 90C250 84.4772 254.477 80 260 80H280C285.523 80 290 84.4772 290 90V100C290 105.523 285.523 110 280 110H260C254.477 110 250 105.523 250 100V90Z" fill="white" stroke="#4C72B0" stroke-width="2"/>
+  <path d="M290 90L300 75L295 90" fill="white" stroke="#4C72B0" stroke-width="2"/>
+  <text x="270" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#333333">123</text>
+</svg>

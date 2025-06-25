@@ -1,0 +1,270 @@
+{
+  "common": {
+    "title": "Ownabee - Where Children's Imagination Becomes Books",
+    "description": "Ownabee is an AI-powered creative storybook platform that transforms children's spoken or written stories into illustrated books with audio narration.",
+    "userExperience": "User Experience",
+    "interfaceDescription": "The intuitive interface is easy for children to use, and with the help of teachers or parents, they can create even richer stories.",
+    "previousScreen": "Previous screen",
+    "previousScreenIcon": "Previous screen icon",
+    "nextScreen": "Next screen",
+    "nextScreenIcon": "Next screen icon",
+    "slideNavigation": "Slide navigation",
+    "goToSlide": "Go to {{title}} slide"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Log In",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "AI-Powered Storybooks for Children's Creativity",
+    "subtitle": "Ownabee helps children create their own personalized storybooks with the help of AI, fostering creativity and literacy skills.",
+    "cta": "Learn More",
+    "educatorCta": "Educator Access",
+    "sectionAriaLabel": "Ownabee Introduction",
+    "ctaAriaLabel": "Learn more about Ownabee",
+    "educatorCtaAriaLabel": "Ownabee educator access"
+  },
+  "journey": {
+    "title": "How It Works",
+    "description": "Introducing the creative journey children take with Ownabee. Through simple steps, your child's imagination becomes a real book.",
+    "step1": "Child shares a story",
+    "step2": "AI generates illustrations",
+    "step3": "Audio narration is created",
+    "step4": "Share the finished book"
+  },
+  "audiobook": {
+    "title": "Bring Stories to Life",
+    "description": "Every story comes with professional-quality audio narration, helping children connect words with sounds.",
+    "features": [
+      {
+        "title": "AI Voice Synthesis",
+        "description": "Natural emotion expression is possible.",
+        "iconTitle": "AI Voice Synthesis Icon"
+      },
+      {
+        "title": "Real Voice Learning",
+        "description": "You can train it to learn any voice you want, such as your child's or parents'.",
+        "iconTitle": "Real Voice Learning Icon"
+      },
+      {
+        "title": "Various Voice Styles",
+        "description": "Create audiobooks with a variety of trained voices.",
+        "iconTitle": "Various Voice Styles Icon"
+      }
+    ]
+  },
+  "meaning": {
+    "title": "Why Ownabee?",
+    "description": "Ownabee comes from 'own' + 'story' + 'bee' - like busy bees, children create their own unique stories.",
+    "mainTitle": "Why Ownabee?",
+    "mainDescription": "The name Ownabee represents our core mission of empowering children to create and own their stories.",
+    "title1": "Own",
+    "description1": "Children take ownership of their creative process and stories.",
+    "title2": "Story",
+    "description2": "Every child has unique stories waiting to be told and shared.",
+    "title3": "Bee",
+    "description3": "Like busy bees, children work creatively to build something beautiful.",
+    "growth": {
+      "title": "Growth Through Creative Activities",
+      "description": "Ownabee is not just a book creation platform. It's an educational tool that helps children develop creativity and confidence as they create their own stories."
+    }
+  },
+  "kindergarten": {
+    "title": "Why Kindergartens Need Ownabee",
+    "subtitle": "Enhancing educational experiences through creative storytelling",
+    "reason1": "Interactive Learning",
+    "description1": "Engage children with interactive storytelling that makes learning fun and memorable",
+    "reason2": "Emotional Development",
+    "description2": "Help children express and understand emotions through creative storytelling",
+    "reason3": "Creative Exploration",
+    "description3": "Provide tools for children to explore their imagination in a structured environment",
+    "usage": {
+      "title": "Ownabee in Kindergartens",
+      "subtitle": "Educational activities that foster children's creativity"
+    },
+    "educationalEffects": {
+      "title": "Educational Effects",
+      "effects": [
+        "Improves literacy and language skills",
+        "Enhances creativity and imagination",
+        "Builds confidence in self-expression",
+        "Develops digital literacy in a safe environment"
+      ]
+    }
+  },
+  "useCases": {
+    "title": "How Families Use Ownabee",
+    "subtitle": "Create meaningful moments with your child",
+    "case1": {
+      "title": "Bedtime Stories",
+      "description": "Transform nighttime routines with personalized stories created by your child."
+    },
+    "case2": {
+      "title": "Family Adventures",
+      "description": "Turn family trips and experiences into lasting memories through illustrated stories."
+    },
+    "case3": {
+      "title": "Learning Moments",
+      "description": "Make educational concepts stick by letting children create stories about what they've learned."
+    }
+  },
+  "tech": {
+    "title": "BeeGM AI",
+    "description": "Our AI technology creates high-quality illustrations and narration for children's stories.",
+    "voice": {
+      "title": "High-Quality AI Voice Synthesis",
+      "description": "Using 'Sorisori AI' technology to create natural, emotion-rich voices. We leverage the same technology used in 'SynchroU' broadcasts to deliver premium voice quality.",
+      "featuresTitle": "Key Technology Features:",
+      "features": [
+        "Natural emotion expression and intonation",
+        "Personalized voice learning and replication",
+        "Support for various voice styles",
+        "Real-time voice generation and transformation"
+      ]
+    },
+    "subtitle": "How our technology works",
+    "component1": {
+      "title": "Natural Language Processing",
+      "description": "Understands children's stories and extracts key elements for visualization."
+    },
+    "component2": {
+      "title": "Image Generation",
+      "description": "Creates vibrant, child-friendly illustrations that match the story content."
+    },
+    "component3": {
+      "title": "Voice Synthesis",
+      "description": "Transforms text into natural-sounding narration with appropriate pacing and emotion."
+    }
+  },
+  "examples": {
+    "title": "See Ownabee in Action",
+    "viewMore": "View More Examples"
+  },
+  "uiExamples": {
+    "title": "User Experience",
+    "subtitle": "Designed for children and adults alike",
+    "description": "Explore the intuitive interface of Ownabee",
+    "example1": {
+      "title": "Story Creation",
+      "description": "Create stories with simple prompts and watch them come to life.",
+      "iconTitle": "Drawing Style Icon"
+    },
+    "example2": {
+      "title": "Character Design",
+      "description": "Describe characters and see them visualized instantly.",
+      "iconTitle": "Character Description Icon"
+    },
+    "example3": {
+      "title": "Audio Narration",
+      "description": "Listen to the story with professional-quality narration.",
+      "iconTitle": "Voice Selection and Recording Icon"
+    },
+    "example4": {
+      "title": "Sharing Options",
+      "description": "Easily share completed books with family members and teachers.",
+      "iconTitle": "Sharing Options Icon"
+    }
+  },
+  "roadmap": {
+    "title": "Coming Soon",
+    "subtitle": "Our vision for the future",
+    "feature1": "Personalized Characters",
+    "feature2": "Multiple Languages",
+    "feature3": "Print-on-Demand Books",
+    "item1": {
+      "title": "Kindergarten Dashboard",
+      "description": "A dedicated dashboard for kindergartens to track student progress and activities.",
+      "iconTitle": "Kindergarten Dashboard Icon"
+    },
+    "item2": {
+      "title": "Creation Archive",
+      "description": "An archive system to store and showcase children's creative works over time.",
+      "iconTitle": "Creation Archive Icon"
+    },
+    "item3": {
+      "title": "Parent Sharing",
+      "description": "Enhanced sharing features for parents to view and share their children's creations.",
+      "iconTitle": "Parent Sharing Feature Icon"
+    },
+    "innovation": {
+      "title": "Continuous Innovation",
+      "description": "We're constantly improving our AI to create even more magical experiences."
+    },
+    "tag1": "AI",
+    "tag2": "Education",
+    "tag3": "Creativity",
+    "tag4": "Literacy"
+  },
+  "collaboration": {
+    "title": "Let's Work Together",
+    "subtitle": "Join the children's storytelling revolution",
+    "description": "Interested in bringing Ownabee to your school or organization? Let's discuss how we can collaborate.",
+    "areas": {
+      "title": "Collaboration Areas",
+      "item1": "Educational Partnerships",
+      "item2": "Content Creation",
+      "item3": "Technology Integration",
+      "item4": "Research & Development"
+    },
+    "form": {
+      "title": "Inquiry Form",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "example@email.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "How can we help you?",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your project or inquiry",
+      "privacyLabel": "I agree to the privacy policy",
+      "submitButton": "Send Message"
+    },
+    "illustration": {
+      "alt": "Ownabee collaboration illustration"
+    },
+    "growTogether": {
+      "title": "Grow Together",
+      "description1": "Join us in our mission to inspire the next generation of storytellers.",
+      "description2": "We're always looking for partners who share our vision for creative education."
+    },
+    "quickContact": {
+      "title": "Quick Contact",
+      "emailAriaLabel": "Send email to Ownabee",
+      "emailIconTitle": "Email icon",
+      "phoneAriaLabel": "Call Ownabee",
+      "phoneIconTitle": "Phone icon"
+    }
+  },
+  "footer": {
+    "tagline": "Where children's imagination becomes books.",
+    "services": {
+      "title": "Services",
+      "howToUse": "How to Use",
+      "useCases": "Use Cases",
+      "technology": "Technology"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "roadmap": "Roadmap",
+      "collaboration": "Collaboration"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "twitter": "Twitter"
+    },
+    "copyright": "© 2025 Ownabee. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "language": "Language"
+  }
+}
