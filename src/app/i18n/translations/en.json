@@ -18,7 +18,8 @@
     "pricing": "Pricing",
     "contact": "Contact",
     "login": "Log In",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "logoAlt": "Ownabee Logo"
   },
   "hero": {
     "title": "AI-Powered Storybooks for Children's Creativity",
@@ -38,23 +39,38 @@
     "step4": "Share the finished book"
   },
   "audiobook": {
-    "title": "Bring Stories to Life",
-    "description": "Every story comes with professional-quality audio narration, helping children connect words with sounds.",
+    "title": "AI Voice Synthesis",
+    "description": "Experience our advanced voice synthesis technology that brings stories to life.",
+    "viewMore": "View More Examples",
+    "player": {
+      "title": "Audiobook Player",
+      "storyTitle": "Bedtime Stories Read in Your Child's Voice",
+      "timeDisplay": "00:45 / 03:22",
+      "controls": "Audio playback controls",
+      "prevTrack": "Previous track",
+      "prevTrackButton": "Previous track button",
+      "pause": "Pause",
+      "pauseButton": "Pause button",
+      "nextTrack": "Next track",
+      "nextTrackButton": "Next track button",
+      "audioIcon": "Audiobook icon",
+      "experienceText": "Experience natural voice synthesis technology implemented with BeeGM AI."
+    },
     "features": [
       {
         "title": "AI Voice Synthesis",
         "description": "Natural emotion expression is possible.",
-        "iconTitle": "AI Voice Synthesis Icon"
+        "iconTitle": "Voice Synthesis Icon"
       },
       {
         "title": "Real Voice Learning",
         "description": "You can train it to learn any voice you want, such as your child's or parents'.",
-        "iconTitle": "Real Voice Learning Icon"
+        "iconTitle": "Voice Learning Icon"
       },
       {
         "title": "Various Voice Styles",
         "description": "Create audiobooks with a variety of trained voices.",
-        "iconTitle": "Various Voice Styles Icon"
+        "iconTitle": "Voice Styles Icon"
       }
     ]
   },
@@ -100,6 +116,38 @@
   "useCases": {
     "title": "How Families Use Ownabee",
     "subtitle": "Create meaningful moments with your child",
+    "teacherFeedback": "Teacher Feedback",
+    "feedbackQuote": "Through Ownabee, children have greatly improved their confidence and creativity by creating and sharing their own stories. Parents' reactions have also been very positive.",
+    "teacherName": "Ms. Kim, Happy Kindergarten",
+    "viewMore": "View More Examples",
+    "tech": {
+      "title": "Our Technology",
+      "subtitle": "Ownabee combines cutting-edge AI technologies to create personalized storybooks for children.",
+      "component1": {
+        "title": "Story Generation",
+        "description": "AI-powered story creation based on your child's interests"
+      },
+      "component2": {
+        "title": "Illustration",
+        "description": "Beautiful, custom illustrations that match the story"
+      },
+      "component3": {
+        "title": "Voice Synthesis",
+        "description": "Realistic voice narration that brings stories to life"
+      },
+      "aiTitle": "BeeGM AI",
+      "voice": {
+        "title": "Advanced Voice Synthesis",
+        "description": "Our voice synthesis technology creates natural-sounding narration that captures the emotion and nuance of each story. Children can hear their stories read in familiar voices.",
+        "featuresTitle": "Key Features",
+        "features": [
+          "Voice cloning from just a few minutes of audio",
+          "Emotional expression that matches the story content",
+          "Support for multiple languages and accents",
+          "Custom voice profiles for each family member"
+        ]
+      }
+    },
     "case1": {
       "title": "Bedtime Stories",
       "description": "Transform nighttime routines with personalized stories created by your child."
@@ -171,8 +219,9 @@
     }
   },
   "roadmap": {
-    "title": "Coming Soon",
+    "title": "In Development by Customer Request",
     "subtitle": "Our vision for the future",
+    "innovationIconTitle": "Continuous Innovation Icon",
     "feature1": "Personalized Characters",
     "feature2": "Multiple Languages",
     "feature3": "Print-on-Demand Books",
@@ -203,7 +252,8 @@
   "collaboration": {
     "title": "Let's Work Together",
     "subtitle": "Join the children's storytelling revolution",
-    "description": "Interested in bringing Ownabee to your school or organization? Let's discuss how we can collaborate.",
+    "description": "Have questions or want to collaborate? Get in touch!",
+    "checkmarkIconTitle": "Checkmark",
     "areas": {
       "title": "Collaboration Areas",
       "item1": "Educational Partnerships",

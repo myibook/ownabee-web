@@ -36,7 +36,7 @@ const CollaborationSection: React.FC = () => {
                     <li key={index} className="flex items-start">
                       <div className="mr-2 sm:mr-3 mt-1 text-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5" role="img" aria-hidden="true">
-                          <title>체크마크</title>
+                          <title>{t('collaboration.checkmarkIconTitle')}</title>
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>

@@ -38,7 +38,7 @@ const Header: React.FC = () => {
             <div className="relative w-10 h-10 mr-2">
               <Image 
                 src="/assets/brand/ownabee-logo.svg" 
-                alt="Ownabee 로고"
+                alt={t('header.logoAlt')}
                 width={40}
                 height={40}
                 priority={true}

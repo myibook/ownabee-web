@@ -90,48 +90,48 @@ const AudiobookSection: React.FC = () => {
           <div className="w-full md:w-1/2">
             <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 relative max-w-md mx-auto md:mx-0">
               <div className="bg-primary text-white rounded-t-lg p-3 sm:p-4 absolute top-0 left-0 right-0">
-                <h3 className="font-bold text-sm sm:text-base">오디오북 플레이어</h3>
+                <h3 className="font-bold text-sm sm:text-base">{t('audiobook.player.title')}</h3>
               </div>
               
               <div className="pt-12 sm:pt-16 pb-3 sm:pb-4">
                 <div className="bg-background-alt rounded-lg p-4 sm:p-6 mb-4 sm:mb-6">
-                  <div className="flex justify-center mb-3 sm:mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-12 h-12 sm:w-16 sm:h-16 text-primary" role="img" aria-hidden="true">
-                      <title>오디오북 아이콘</title>
+                  <div className="flex items-center justify-center mb-3 sm:mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 sm:w-10 sm:h-10 text-primary mr-2 sm:mr-3" role="img" aria-hidden="true">
+                      <title>{t('audiobook.player.audioIcon')}</title>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                     </svg>
                   </div>
                   <div className="text-center mb-3 sm:mb-4">
-                    <h4 className="font-bold text-base sm:text-lg">우리 아이의 목소리로 읽어주는 동화</h4>
-                    <p className="text-text-secondary text-xs sm:text-sm">00:45 / 03:22</p>
+                    <h4 className="font-bold text-base sm:text-lg">{t('audiobook.player.storyTitle')}</h4>
+                    <p className="text-text-secondary text-xs sm:text-sm">{t('audiobook.player.timeDisplay')}</p>
                   </div>
                   
                   {/* Audio controls */}
-                  <div className="flex justify-center space-x-4 sm:space-x-6" role="group" aria-label="오디오 재생 컨트롤">
+                  <div className="flex justify-center space-x-4 sm:space-x-6" role="group" aria-label={t('audiobook.player.controls')}>
                     <button 
                       className="text-text-secondary hover:text-primary"
-                      aria-label="이전 트랙"
+                      aria-label={t('audiobook.player.prevTrack')}
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 sm:w-8 sm:h-8" role="img" aria-hidden="true">
-                        <title>이전 트랙 버튼</title>
+                        <title>{t('audiobook.player.prevTrackButton')}</title>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
                       </svg>
                     </button>
                     <button 
                       className="text-primary"
-                      aria-label="일시정지"
+                      aria-label={t('audiobook.player.pause')}
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-10 h-10 sm:w-12 sm:h-12" role="img" aria-hidden="true">
-                        <title>일시정지 버튼</title>
+                        <title>{t('audiobook.player.pauseButton')}</title>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </button>
                     <button 
                       className="text-text-secondary hover:text-primary"
-                      aria-label="다음 트랙"
+                      aria-label={t('audiobook.player.nextTrack')}
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 sm:w-8 sm:h-8" role="img" aria-hidden="true">
-                        <title>다음 트랙 버튼</title>
+                        <title>{t('audiobook.player.nextTrackButton')}</title>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
                       </svg>
                     </button>
@@ -139,7 +139,7 @@ const AudiobookSection: React.FC = () => {
                 </div>
                 
                 <p className="text-center text-xs sm:text-sm text-text-secondary">
-                  BeeGM AI 기술로 구현된 자연스러운 음성 합성 기술을 체험해보세요.
+                  {t('audiobook.player.experienceText')}
                 </p>
               </div>
             </div>

@@ -96,7 +96,7 @@ const RoadmapSection: React.FC = () => {
             <div className="md:w-1/4 mb-5 sm:mb-6 md:mb-0 flex justify-center">
               <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-secondary/20 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-secondary" role="img" aria-hidden="true">
-                  <title>지속적인 혁신 아이콘</title>
+                  <title>{t('roadmap.innovationIconTitle')}</title>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>

@@ -18,7 +18,8 @@
     "pricing": "요금제",
     "contact": "문의",
     "login": "로그인",
-    "getStarted": "시작하기"
+    "getStarted": "시작하기",
+    "logoAlt": "Ownabee 로고"
   },
   "hero": {
     "title": "AI 기반 어린이 창작 동화책",
@@ -38,23 +39,38 @@
     "step4": "완성된 책을 공유합니다"
   },
   "audiobook": {
-    "title": "이야기에 생기를 불어넣다",
-    "description": "모든 이야기는 전문적인 품질의 오디오 나레이션과 함께 제공되어 아이들이 단어와 소리를 연결하는 데 도움을 줍니다.",
+    "title": "AI 음성 합성",
+    "description": "우리의 고급 음성 합성 기술을 경험해보세요. 이야기에 생명을 불어넣습니다.",
+    "viewMore": "더 많은 예시 보기",
+    "player": {
+      "title": "오디오북 플레이어",
+      "storyTitle": "우리 아이의 목소리로 읽어주는 동화",
+      "timeDisplay": "00:45 / 03:22",
+      "controls": "오디오 재생 컨트롤",
+      "prevTrack": "이전 트랙",
+      "prevTrackButton": "이전 트랙 버튼",
+      "pause": "일시정지",
+      "pauseButton": "일시정지 버튼",
+      "nextTrack": "다음 트랙",
+      "nextTrackButton": "다음 트랙 버튼",
+      "audioIcon": "오디오북 아이콘",
+      "experienceText": "BeeGM AI 기술로 구현된 자연스러운 음성 합성 기술을 체험해보세요."
+    },
     "features": [
       {
-        "title": "AI 음성 합성 기술",
+        "title": "AI 음성 합성",
         "description": "자연스러운 감정 표현이 가능합니다.",
-        "iconTitle": "AI 음성 합성 기술 아이콘"
+        "iconTitle": "음성 합성 아이콘"
       },
       {
-        "title": "실제 목소리 학습",
-        "description": "아이나 부모님 등 원하는 목소리를 학습시킬 수 있습니다.",
-        "iconTitle": "실제 목소리 학습 아이콘"
+        "title": "실제 음성 학습",
+        "description": "아이나 부모님의 목소리 등 원하는 모든 음성을 학습시킬 수 있습니다.",
+        "iconTitle": "음성 학습 아이콘"
       },
       {
-        "title": "다양한 목소리 스타일",
-        "description": "학습시킨 다양한 목소리로 오디오북 제작이 가능합니다.",
-        "iconTitle": "다양한 목소리 스타일 아이콘"
+        "title": "다양한 음성 스타일",
+        "description": "다양한 학습된 목소리로 오디오북을 만들 수 있습니다.",
+        "iconTitle": "음성 스타일 아이콘"
       }
     ]
   },
@@ -100,8 +116,12 @@
     "description3": "개인화된 이야기로 학습을 재미있고 상호작용적으로 만듭니다."
   },
   "useCases": {
-    "title": "가족들의 Ownabee 활용법",
-    "subtitle": "아이와 함께 의미 있는 순간을 만들어보세요",
+    "title": "가족을 위한 서비스",
+    "subtitle": "아이와 함께하는 의미있는 순간을 만들어보세요",
+    "teacherFeedback": "교사 피드백",
+    "feedbackQuote": "Ownabee를 통해 아이들이 자신의 이야기를 만들고 공유하는 과정에서 자신감과 창의력이 크게 향상되었습니다. 학부모님들의 반응도 매우 긍정적입니다.",
+    "teacherName": "김선생님, 행복유치원",
+    "viewMore": "더 많은 사례 보기",
     "case1": {
       "title": "취침 전 이야기",
       "description": "아이가 만든 개인화된 이야기로 취침 시간을 특별하게 만들어보세요."
@@ -117,7 +137,8 @@
   },
   "tech": {
     "title": "BeeGM AI",
-    "description": "우리의 AI 기술은 아이들의 이야기를 위한 고품질 삽화와 나레이션을 생성합니다.",
+    "description": "우리의 AI 기술은 아이들의 이야기에 고품질 일러스트레이션과 내레이션을 제공합니다.",
+    "aiTitle": "BeeGM AI",
     "voice": {
       "title": "고품질 AI 음성합성 기술",
       "description": "'BeeGM AI' 기반 기술을 활용하여 자연스럽고 감정이 풍부한 음성을 생성합니다. '싱크로유' 방송에 적용된 기술을 활용하여 고품질 음성을 제공합니다.",
@@ -175,6 +196,7 @@
   "roadmap": {
     "title": "고객의 요청으로 개발중",
     "subtitle": "미래를 위한 우리의 비전",
+    "innovationIconTitle": "지속적인 혁신 아이콘",
     "feature1": "개인화된 캐릭터",
     "feature2": "다양한 언어 지원",
     "feature3": "오프라인 출판 서비스",
@@ -206,6 +228,7 @@
     "title": "함께 일해요",
     "subtitle": "아이들의 스토리텔링 혁명에 동참하세요",
     "description": "질문이 있거나 협력하고 싶으신가요? 연락주세요!",
+    "checkmarkIconTitle": "체크마크",
     "areas": {
       "title": "협력 분야",
       "item1": "교육 파트너십",

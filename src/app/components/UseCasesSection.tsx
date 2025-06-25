@@ -83,16 +83,15 @@ const UseCasesSection: React.FC = () => {
                 <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-5 md:mb-6">{useCase.description}</p>
                 
                 <div className="bg-white p-3 sm:p-4 rounded-lg border border-gray-100">
-                  <h4 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base">교사 피드백</h4>
+                  <h4 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base">{t('useCases.teacherFeedback')}</h4>
                   <p className="text-xs sm:text-sm italic text-text-secondary">
-                    &ldquo;Ownabee를 통해 아이들이 자신의 이야기를 만들고 공유하는 과정에서 
-                    자신감과 창의력이 크게 향상되었습니다. 학부모님들의 반응도 매우 긍정적입니다.&rdquo;
+                    &ldquo;{t('useCases.feedbackQuote')}&rdquo;
                   </p>
                   <div className="mt-2 flex items-center">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 flex items-center justify-center mr-2">
                       <span className="text-primary font-bold text-xs sm:text-sm">K</span>
                     </div>
-                    <span className="text-xs sm:text-sm font-semibold">김선생님, 행복유치원</span>
+                    <span className="text-xs sm:text-sm font-semibold">{t('useCases.teacherName')}</span>
                   </div>
                 </div>
               </div>
@@ -102,7 +101,7 @@ const UseCasesSection: React.FC = () => {
         
         <div className="mt-8 sm:mt-10 md:mt-12 text-center">
           <button className="btn-secondary px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-white text-sm sm:text-base">
-            더 많은 사례 보기
+            {t('useCases.viewMore')}
           </button>
         </div>
       </div>
