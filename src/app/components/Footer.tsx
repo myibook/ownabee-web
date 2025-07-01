@@ -44,8 +44,8 @@ export default function Footer() {
             <div className="col-span-2 md:col-span-1 mt-4 md:mt-0">
               <h4 className="font-bold text-sm sm:text-base mb-3 sm:mb-4">{t('footer.contact.title')}</h4>
               <ul className="space-y-1 sm:space-y-2">
-                <li className="text-gray-400 text-xs sm:text-sm">contact@ownabee.com</li>
-                <li className="text-gray-400 text-xs sm:text-sm">010-1234-5678</li>
+                <li className="text-gray-400 text-xs sm:text-sm">info@ownabee.com</li>
+                <li className="text-gray-400 text-xs sm:text-sm">010-9082-6793</li>
               </ul>
             </div>
           </div>

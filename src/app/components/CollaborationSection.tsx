@@ -139,9 +139,9 @@ const CollaborationSection: React.FC = () => {
         <div className="mt-10 sm:mt-12 md:mt-16 text-center">
           <h3 id="quick-contact-title" className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">{t('collaboration.quickContact.title')}</h3>
           <div className="flex flex-col md:flex-row justify-center gap-3 sm:gap-4 md:gap-8" aria-labelledby="quick-contact-title">
-            <a href="mailto:contact@ownabee.com" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.emailAriaLabel')}>
+            <a href="mailto:info@ownabee.com" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.emailAriaLabel')}>
               <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" aria-hidden="true" />
-              <span className="text-sm sm:text-base">contact@ownabee.com</span>
+              <span className="text-sm sm:text-base">info@ownabee.com</span>
             </a>
             <a href="tel:+8210-1234-5678" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.phoneAriaLabel')}>
               <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" aria-hidden="true" />
