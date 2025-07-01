@@ -143,9 +143,9 @@ const CollaborationSection: React.FC = () => {
               <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" aria-hidden="true" />
               <span className="text-sm sm:text-base">info@ownabee.com</span>
             </a>
-            <a href="tel:+8210-1234-5678" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.phoneAriaLabel')}>
+            <a href="tel:+8210-9082-6793" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.phoneAriaLabel')}>
               <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" aria-hidden="true" />
-              <span className="text-sm sm:text-base">010-1234-5678</span>
+              <span className="text-sm sm:text-base">010-9082-6793</span>
             </a>
           </div>
         </div>
