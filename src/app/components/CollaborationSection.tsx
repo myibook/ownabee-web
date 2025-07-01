@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { useTranslation } from '../i18n/TranslationContext';
+import { Users, Check, Mail, Phone } from './ui/icons';
 
 /**
  * CollaborationSection component for the Ownabee landing page
@@ -35,10 +35,7 @@ const CollaborationSection: React.FC = () => {
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <div className="mr-2 sm:mr-3 mt-1 text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5" role="img" aria-hidden="true">
-                          <title>{t('collaboration.checkmarkIconTitle')}</title>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                        <Check className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
                       </div>
                       <span className="text-sm sm:text-base">{item}</span>
                     </li>
@@ -123,14 +120,9 @@ const CollaborationSection: React.FC = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 {/* Collaboration illustration with Next.js Image component for optimization */}
                 <div className="relative w-full h-full p-6 md:p-8">
-                  <Image 
-                    src="/assets/brand/illustration-collaboration.svg" 
-                    alt={t('collaboration.illustration.alt')}
-                    fill
-                    sizes="(max-width: 768px) 0vw, 40vw"
-                    className="object-contain"
-                    loading="lazy"
-                  />
+                  <div className="flex items-center justify-center w-full h-full">
+                    <Users size={180} className="text-primary" aria-hidden="true" />
+                  </div>
                 </div>
                 <div className="absolute bottom-6 md:bottom-8 left-0 right-0 text-center bg-white/80 mx-6 md:mx-8 py-3 rounded-lg shadow-sm">
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">{t('collaboration.growTogether.title')}</h3>
@@ -148,17 +140,11 @@ const CollaborationSection: React.FC = () => {
           <h3 id="quick-contact-title" className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">{t('collaboration.quickContact.title')}</h3>
           <div className="flex flex-col md:flex-row justify-center gap-3 sm:gap-4 md:gap-8" aria-labelledby="quick-contact-title">
             <a href="mailto:contact@ownabee.com" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.emailAriaLabel')}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" role="img" aria-hidden="true">
-                <title>{t('collaboration.quickContact.emailIconTitle')}</title>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" aria-hidden="true" />
               <span className="text-sm sm:text-base">contact@ownabee.com</span>
             </a>
             <a href="tel:+8210-1234-5678" className="flex items-center justify-center bg-white p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow" aria-label={t('collaboration.quickContact.phoneAriaLabel')}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" role="img" aria-hidden="true">
-                <title>{t('collaboration.quickContact.phoneIconTitle')}</title>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
+              <Phone className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-primary" aria-hidden="true" />
               <span className="text-sm sm:text-base">010-1234-5678</span>
             </a>
           </div>

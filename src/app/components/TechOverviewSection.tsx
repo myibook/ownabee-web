@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTranslation } from '../i18n/TranslationContext';
+import { Kanban, Image as ImageIcon, Mic, ArrowRight, Lightbulb } from 'lucide-react';
 
 /**
  * TechOverviewSection component for the Ownabee landing page
@@ -15,27 +16,21 @@ const TechOverviewSection: React.FC = () => {
       title: t('tech.component1.title'),
       description: t('tech.component1.description'),
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-        </svg>
+        <Kanban className="w-10 h-10" aria-hidden="true" />
       )
     },
     {
       title: t('tech.component2.title'),
       description: t('tech.component2.description'),
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
+        <ImageIcon className="w-10 h-10" aria-hidden="true" />
       )
     },
     {
       title: t('tech.component3.title'),
       description: t('tech.component3.description'),
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-        </svg>
+        <Mic className="w-10 h-10" aria-hidden="true" />
       )
     }
   ];
@@ -67,9 +62,7 @@ const TechOverviewSection: React.FC = () => {
                   {/* Connector between components */}
                   {index < techComponents.length - 1 && (
                     <div className="hidden md:block">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-primary">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      <ArrowRight className="w-6 h-6 text-primary" aria-hidden="true" />
                     </div>
                   )}
                 </React.Fragment>
@@ -83,9 +76,7 @@ const TechOverviewSection: React.FC = () => {
               <div className="w-full md:w-1/3 mb-6 md:mb-0">
                 <div className="bg-secondary/10 rounded-lg p-4 sm:p-5 md:p-6 flex items-center justify-center h-full">
                   <div className="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-3 md:mb-4 text-secondary">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
+                    <Lightbulb className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-3 md:mb-4 text-secondary" aria-hidden="true" />
                     <h3 className="font-bold text-base sm:text-lg">{t('tech.aiTitle')}</h3>
                   </div>
                 </div>

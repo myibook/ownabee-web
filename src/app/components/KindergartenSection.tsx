@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTranslation } from '../i18n/TranslationContext';
+import { Brain, Heart, Sparkles, School } from 'lucide-react';
 
 /**
  * KindergartenSection component for the Ownabee landing page
@@ -15,27 +16,27 @@ const KindergartenSection: React.FC = () => {
       title: t('kindergarten.reason1'),
       description: t('kindergarten.description1'),
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-12 h-12">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-        </svg>
+        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+          <Brain className="w-full h-full" strokeWidth={2} />
+        </div>
       )
     },
     {
       title: t('kindergarten.reason2'),
       description: t('kindergarten.description2'),
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-12 h-12">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
+        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+          <Heart className="w-full h-full" strokeWidth={2} />
+        </div>
       )
     },
     {
       title: t('kindergarten.reason3'),
       description: t('kindergarten.description3'),
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-12 h-12">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-        </svg>
+        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+          <Sparkles className="w-full h-full" strokeWidth={2} />
+        </div>
       )
     }
   ];
@@ -57,9 +58,7 @@ const KindergartenSection: React.FC = () => {
               {/* Placeholder for kindergarten image - replace with actual image */}
               <div className="absolute inset-0 bg-primary/10 rounded-lg flex items-center justify-center">
                 <div className="text-center p-4 sm:p-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-4 text-primary">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                  </svg>
+                  <School className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-4 text-primary" aria-hidden="true" />
                   <p className="font-semibold text-base sm:text-lg">{t('kindergarten.usage.title')}</p>
                   <p className="text-xs sm:text-sm text-text-secondary mt-1 sm:mt-2">{t('kindergarten.usage.subtitle')}</p>
                 </div>

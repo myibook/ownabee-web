@@ -37,7 +37,7 @@ const Header: React.FC = () => {
             {/* Logo with Next.js Image component for optimization */}
             <div className="relative w-10 h-10 mr-2">
               <Image 
-                src="/assets/brand/ownabee-logo.svg" 
+                src="/assets/brand/ownabee-logo.png" 
                 alt={t('header.logoAlt')}
                 width={40}
                 height={40}

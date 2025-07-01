@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useTranslation } from '../i18n/TranslationContext';
+import { Palette, Edit, Mic, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 /**
  * UIExamplesSection component for the Ownabee landing page
@@ -19,10 +20,11 @@ const UIExamplesSection: React.FC = () => {
       description: t('uiExamples.example1.description'),
       image: '/이야기창작화면.png',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10" role="img" aria-hidden="true">
-          <title>{t('uiExamples.example1.iconTitle')}</title>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-        </svg>
+        <Palette 
+          className="w-10 h-10" 
+          aria-hidden="true" 
+          aria-label={t('uiExamples.example1.iconTitle')} 
+        />
       )
     },
     {
@@ -30,10 +32,11 @@ const UIExamplesSection: React.FC = () => {
       description: t('uiExamples.example2.description'),
       image: '/앱첫화면.png',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10" role="img" aria-hidden="true">
-          <title>{t('uiExamples.example2.iconTitle')}</title>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-        </svg>
+        <Edit 
+          className="w-10 h-10" 
+          aria-hidden="true" 
+          aria-label={t('uiExamples.example2.iconTitle')} 
+        />
       )
     },
     {
@@ -41,10 +44,11 @@ const UIExamplesSection: React.FC = () => {
       description: t('uiExamples.example3.description'),
       image: '/앱로그인화면.png',
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10" role="img" aria-hidden="true">
-          <title>{t('uiExamples.example3.iconTitle')}</title>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-        </svg>
+        <Mic 
+          className="w-10 h-10" 
+          aria-hidden="true" 
+          aria-label={t('uiExamples.example3.iconTitle')} 
+        />
       )
     },
     {
@@ -52,10 +56,11 @@ const UIExamplesSection: React.FC = () => {
       description: t('uiExamples.example4.description'),
       image: '/이야기창작화면.png', // Reusing the first image as a fallback for the 4th slide
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10" role="img" aria-hidden="true">
-          <title>{t('uiExamples.example4.iconTitle')}</title>
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+        <CheckCircle 
+          className="w-10 h-10" 
+          aria-hidden="true" 
+          aria-label={t('uiExamples.example4.iconTitle')} 
+        />
       )
     }
   ];
@@ -155,10 +160,11 @@ const UIExamplesSection: React.FC = () => {
                 className="p-2 sm:p-3 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors"
                 aria-label={t('common.previousScreen')}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6" role="img" aria-hidden="true">
-                  <title>{t('common.previousScreenIcon')}</title>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
+                <ChevronLeft 
+                  className="w-5 h-5 sm:w-6 sm:h-6" 
+                  aria-hidden="true" 
+                  aria-label={t('common.previousScreenIcon')} 
+                />
               </button>
               
               {/* Dots */}
@@ -181,10 +187,11 @@ const UIExamplesSection: React.FC = () => {
                 className="p-2 sm:p-3 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors"
                 aria-label={t('common.nextScreen')}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6" role="img" aria-hidden="true">
-                  <title>{t('common.nextScreenIcon')}</title>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ChevronRight 
+                  className="w-5 h-5 sm:w-6 sm:h-6" 
+                  aria-hidden="true" 
+                  aria-label={t('common.nextScreenIcon')} 
+                />
               </button>
             </div>
           </div>

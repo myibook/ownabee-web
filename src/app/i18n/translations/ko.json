@@ -24,6 +24,7 @@
   "hero": {
     "title": "AI 기반 어린이 창작 동화책",
     "subtitle": "오너비는 AI의 도움으로 어린이들이 자신만의 맞춤형 동화책을 만들 수 있도록 도와 창의력과 문해력을 키웁니다.",
+    "welcomeTitle" :"Welcome to OWNABEE!",
     "cta": "더 알아보기",
     "educatorCta": "교육자 액세스",
     "sectionAriaLabel": "오너비 소개",

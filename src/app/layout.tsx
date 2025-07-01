@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/assets/brand/ownabee-logo.svg",
-    apple: "/assets/brand/ownabee-logo.svg",
+    icon: "/assets/brand/ownabee-logo.png",
+    apple: "/assets/brand/ownabee-logo.png",
   },
   openGraph: {
     title: "Ownabee - 아이의 상상이 책이 되는 순간",
