@@ -123,7 +123,7 @@
     "subtitle": "Create meaningful moments with your child",
     "teacherFeedback": "Teacher Feedback",
     "feedbackQuote": "Through Ownabee, children have greatly improved their confidence and creativity by creating and sharing their own stories. Parents' reactions have also been very positive.",
-    "teacherName": "Ms. Kim, Happy Kindergarten",
+    "teacherName": "Ms. Kim, SungMin Kindergarten",
     "viewMore": "View More Examples",
     "tech": {
       "title": "Our Technology",
@@ -155,15 +155,21 @@
     },
     "case1": {
       "title": "Bedtime Stories",
-      "description": "Transform nighttime routines with personalized stories created by your child."
+      "description": "Transform nighttime routines with personalized stories created by your child.",
+      "feedback": "Bedtime stories created with Ownabee have significantly improved our students' sleep routines. Parents report children are more excited for bedtime and have better sleep quality.",
+      "teacherName": "Ms. Park, Dream Kindergarten"
     },
     "case2": {
       "title": "Family Adventures",
-      "description": "Turn family trips and experiences into lasting memories through illustrated stories."
+      "description": "Turn family trips and experiences into lasting memories through illustrated stories.",
+      "feedback": "The family adventure stories have been wonderful for building communication skills. Children love sharing their weekend experiences through creative storytelling with Ownabee.",
+      "teacherName": "Mr. Lee, Sunshine Preschool"
     },
     "case3": {
       "title": "Learning Moments",
-      "description": "Make educational concepts stick by letting children create stories about what they've learned."
+      "description": "Make educational concepts stick by letting children create stories about what they've learned.",
+      "feedback": "Through Ownabee, children have greatly improved their confidence and creativity by creating stories about what they've learned. It reinforces educational concepts in a fun, engaging way.",
+      "teacherName": "Ms. Kim, SungMin Kindergarten"
     }
   },
   "tech": {

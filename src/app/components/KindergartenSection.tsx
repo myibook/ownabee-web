@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { useTranslation } from '../i18n/TranslationContext';
-import { Brain, Heart, Sparkles, School } from 'lucide-react';
+import { Brain, Heart, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 /**
  * KindergartenSection component for the Ownabee landing page
@@ -56,12 +57,14 @@ const KindergartenSection: React.FC = () => {
           <div className="w-full md:w-1/2 mb-6 sm:mb-8 md:mb-0 md:pr-4 lg:pr-8 flex justify-center">
             <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] w-full max-w-md">
               {/* Placeholder for kindergarten image - replace with actual image */}
-              <div className="absolute inset-0 bg-primary/10 rounded-lg flex items-center justify-center">
-                <div className="text-center p-4 sm:p-6">
-                  <School className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 sm:mb-4 text-primary" aria-hidden="true" />
-                  <p className="font-semibold text-base sm:text-lg">{t('kindergarten.usage.title')}</p>
-                  <p className="text-xs sm:text-sm text-text-secondary mt-1 sm:mt-2">{t('kindergarten.usage.subtitle')}</p>
-                </div>
+              <div className="absolute inset-0 rounded-lg overflow-hidden">
+                <Image 
+                  src="/images/kindergartens.png" 
+                  alt={t('kindergarten.usage.title')} 
+                  fill 
+                  style={{ objectFit: 'cover' }} 
+                  priority 
+                />
               </div>
             </div>
           </div>

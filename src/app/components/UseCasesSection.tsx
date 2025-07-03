@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslation } from '../i18n/TranslationContext';
 import { ClipboardList, Users, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 /**
  * UseCasesSection component for the Ownabee landing page
@@ -18,7 +19,7 @@ const UseCasesSection: React.FC = () => {
       icon: (
         <ClipboardList className="w-12 h-12" aria-hidden="true" />
       ),
-      image: '/classroom.jpg' // Placeholder image path
+      image: '/images/learning-moments.png'
     },
     {
       title: t('useCases.case2.title'),
@@ -26,7 +27,7 @@ const UseCasesSection: React.FC = () => {
       icon: (
         <Users className="w-12 h-12" aria-hidden="true" />
       ),
-      image: '/exhibition.jpg' // Placeholder image path
+      image: '/images/family-adventures.png'
     },
     {
       title: t('useCases.case3.title'),
@@ -34,7 +35,7 @@ const UseCasesSection: React.FC = () => {
       icon: (
         <Sparkles className="w-12 h-12" aria-hidden="true" />
       ),
-      image: '/graduation.jpg' // Placeholder image path
+      image: '/images/bedtime-stories.png'
     }
   ];
 
@@ -55,15 +56,17 @@ const UseCasesSection: React.FC = () => {
               className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center bg-background-alt rounded-lg overflow-hidden shadow-sm`}
             >
               {/* Image side */}
-              <div className="w-full md:w-1/2 h-48 sm:h-56 md:h-64 lg:h-auto relative">
-                {/* Placeholder for image - replace with actual image */}
-                <div className="absolute inset-0 bg-secondary/10 flex items-center justify-center">
-                  <div className="text-center p-4 sm:p-6">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto">
-                      {useCase.icon}
-                    </div>
-                    <p className="font-semibold mt-2 text-sm sm:text-base">{useCase.title}</p>
-                  </div>
+              {/* Image side: full width on mobile, half width on desktop, 
+                  with a fixed height on small screens and automatic height on larger screens */}
+              <div className="w-full md:w-1/2 h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96 relative">
+                <div className="absolute inset-0 overflow-hidden">
+                  <Image 
+                    src={useCase.image}
+                    alt={useCase.title}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    priority
+                  />
                 </div>
               </div>
               
@@ -80,13 +83,13 @@ const UseCasesSection: React.FC = () => {
                 <div className="bg-white p-3 sm:p-4 rounded-lg border border-gray-100">
                   <h4 className="font-bold mb-1 sm:mb-2 text-sm sm:text-base">{t('useCases.teacherFeedback')}</h4>
                   <p className="text-xs sm:text-sm italic text-text-secondary">
-                    &ldquo;{t('useCases.feedbackQuote')}&rdquo;
+                    &ldquo;{t(`useCases.case${index + 1}.feedback`)}&rdquo;
                   </p>
                   <div className="mt-2 flex items-center">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 flex items-center justify-center mr-2">
-                      <span className="text-primary font-bold text-xs sm:text-sm">K</span>
+                      <span className="text-primary font-bold text-xs sm:text-sm">{t(`useCases.case${index + 1}.teacherName`).charAt(0)}</span>
                     </div>
-                    <span className="text-xs sm:text-sm font-semibold">{t('useCases.teacherName')}</span>
+                    <span className="text-xs sm:text-sm font-semibold">{t(`useCases.case${index + 1}.teacherName`)}</span>
                   </div>
                 </div>
               </div>
