@@ -1,12 +1,7 @@
 /**
- * ElevenLabs API utility functions
+ * ElevenLabs API utility functions - Client-side implementation
+ * Uses server API routes to avoid Node.js-specific imports in client bundle
  */
-import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js";
-
-const API_KEY = 'sk_9ac848590f82edc99d16bfad44e6be2da0517ed54b63335e';
-
-// Initialize the ElevenLabs client
-const client = new ElevenLabsClient({ apiKey: API_KEY });
 
 // Voice IDs
 export const DEFAULT_VOICE_ID = 'ZT9u07TYPVl83ejeLakq'; // Rachel voice
@@ -20,56 +15,35 @@ export const AVAILABLE_VOICES = [
 ];
 
 /**
- * Convert text to speech using ElevenLabs API
+ * Convert text to speech using ElevenLabs API via server route
  * @param text Text to convert to speech
  * @param voiceId Voice ID to use (defaults to Rachel voice)
  * @returns URL to audio file
  */
 export async function textToSpeech(text: string, voiceId: string = DEFAULT_VOICE_ID): Promise<string> {
   try {
-    // Use the streaming version to get audio data
-    const audioStream = await client.textToSpeech.stream(voiceId, {
-      text,
-      outputFormat: "mp3_44100_128",
-      modelId: "eleven_multilingual_v2"
+    // Call our server API route instead of using the ElevenLabs client directly
+    const response = await fetch('/api/elevenlabs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ text, voiceId }),
     });
     
-    // Create an audio element to play the stream directly
-    // This approach uses the MediaSource API which is more efficient for streaming audio
-    const mediaSource = new MediaSource();
-    const url = URL.createObjectURL(mediaSource);
+    if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
     
-    mediaSource.addEventListener('sourceopen', async () => {
-      try {
-        // Create a source buffer for MP3 audio
-        const sourceBuffer = mediaSource.addSourceBuffer('audio/mpeg');
-        
-        // Process the stream
-        const reader = audioStream.getReader();
-        
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          
-          // Wait for the source buffer to be ready for more data
-          if (sourceBuffer.updating) {
-            await new Promise(resolve => {
-              sourceBuffer.addEventListener('updateend', resolve, { once: true });
-            });
-          }
-          
-          // Append the chunk to the source buffer
-          sourceBuffer.appendBuffer(value);
-        }
-        
-        // End of stream
-        if (!mediaSource.readyState.includes('closed')) {
-          mediaSource.endOfStream();
-        }
-      } catch (err) {
-        console.error('Error processing audio stream:', err);
-      }
-    });
+    const data = await response.json();
+    
+    if (!data.success || !data.audio) {
+      throw new Error(data.error || 'Failed to convert text to speech');
+    }
+    
+    // Convert base64 audio to blob and create URL
+    const audioBlob = base64ToBlob(data.audio, 'audio/mp3');
+    const url = URL.createObjectURL(audioBlob);
     
     return url;
   } catch (error) {
@@ -79,18 +53,47 @@ export async function textToSpeech(text: string, voiceId: string = DEFAULT_VOICE
 }
 
 /**
- * Get available voices from ElevenLabs API
+ * Get available voices from ElevenLabs API via server route
  * @returns List of available voices
  */
 export async function getVoices() {
   try {
-    // Use the client to get voices
-    const voices = await client.voices.getAll();
-    return voices;
+    // Call our server API route instead of using the ElevenLabs client directly
+    const response = await fetch('/api/elevenlabs');
+    
+    if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+    
+    const data = await response.json();
+    return data.voices || AVAILABLE_VOICES;
   } catch (error) {
     console.error('Error fetching voices:', error);
-    return [];
+    // Fall back to predefined voices if API call fails
+    return AVAILABLE_VOICES;
   }
+}
+
+/**
+ * Helper function to convert base64 to Blob
+ */
+function base64ToBlob(base64: string, mimeType: string): Blob {
+  const byteCharacters = atob(base64);
+  const byteArrays = [];
+  
+  for (let offset = 0; offset < byteCharacters.length; offset += 512) {
+    const slice = byteCharacters.slice(offset, offset + 512);
+    
+    const byteNumbers = new Array(slice.length);
+    for (let i = 0; i < slice.length; i++) {
+      byteNumbers[i] = slice.charCodeAt(i);
+    }
+    
+    const byteArray = new Uint8Array(byteNumbers);
+    byteArrays.push(byteArray);
+  }
+  
+  return new Blob(byteArrays, { type: mimeType });
 }
 
 /**
