@@ -1,12 +1,7 @@
 /**
- * ElevenLabs API utility functions
+ * ElevenLabs API utility functions - Client-side implementation
+ * Uses fetch API to call server-side API routes instead of direct ElevenLabs client
  */
-import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js";
-
-const API_KEY = 'sk_9ac848590f82edc99d16bfad44e6be2da0517ed54b63335e';
-
-// Initialize the ElevenLabs client
-const client = new ElevenLabsClient({ apiKey: API_KEY });
 
 // Voice IDs
 export const DEFAULT_VOICE_ID = 'ZT9u07TYPVl83ejeLakq'; // Rachel voice
@@ -20,56 +15,31 @@ export const AVAILABLE_VOICES = [
 ];
 
 /**
- * Convert text to speech using ElevenLabs API
+ * Convert text to speech using ElevenLabs API via server-side API route
  * @param text Text to convert to speech
  * @param voiceId Voice ID to use (defaults to Rachel voice)
- * @returns URL to audio file
+ * @returns URL to audio blob
  */
 export async function textToSpeech(text: string, voiceId: string = DEFAULT_VOICE_ID): Promise<string> {
   try {
-    // Use the streaming version to get audio data
-    const audioStream = await client.textToSpeech.stream(voiceId, {
-      text,
-      outputFormat: "mp3_44100_128",
-      modelId: "eleven_multilingual_v2"
+    // Call our server-side API route instead of using the ElevenLabs client directly
+    const response = await fetch('/api/elevenlabs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ text, voiceId }),
     });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    // Get the audio data as a blob
+    const audioBlob = await response.blob();
     
-    // Create an audio element to play the stream directly
-    // This approach uses the MediaSource API which is more efficient for streaming audio
-    const mediaSource = new MediaSource();
-    const url = URL.createObjectURL(mediaSource);
-    
-    mediaSource.addEventListener('sourceopen', async () => {
-      try {
-        // Create a source buffer for MP3 audio
-        const sourceBuffer = mediaSource.addSourceBuffer('audio/mpeg');
-        
-        // Process the stream
-        const reader = audioStream.getReader();
-        
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          
-          // Wait for the source buffer to be ready for more data
-          if (sourceBuffer.updating) {
-            await new Promise(resolve => {
-              sourceBuffer.addEventListener('updateend', resolve, { once: true });
-            });
-          }
-          
-          // Append the chunk to the source buffer
-          sourceBuffer.appendBuffer(value);
-        }
-        
-        // End of stream
-        if (!mediaSource.readyState.includes('closed')) {
-          mediaSource.endOfStream();
-        }
-      } catch (err) {
-        console.error('Error processing audio stream:', err);
-      }
-    });
+    // Create a URL for the blob
+    const url = URL.createObjectURL(audioBlob);
     
     return url;
   } catch (error) {
@@ -79,14 +49,22 @@ export async function textToSpeech(text: string, voiceId: string = DEFAULT_VOICE
 }
 
 /**
- * Get available voices from ElevenLabs API
+ * Get available voices from ElevenLabs API via server-side API route
  * @returns List of available voices
  */
 export async function getVoices() {
   try {
-    // Use the client to get voices
-    const voices = await client.voices.getAll();
-    return voices;
+    // Call our server-side API route
+    const response = await fetch('/api/elevenlabs', {
+      method: 'GET',
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.voices;
   } catch (error) {
     console.error('Error fetching voices:', error);
     return [];
