@@ -1,3 +1,9 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
 generator client {
   provider = "prisma-client-js"
   output   = "../src/generated/prisma"
@@ -8,6 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Audiobook model
 model Audiobook {
   id          String    @id @default(cuid())
   title       String
@@ -19,45 +26,48 @@ model Audiobook {
   chapters    Chapter[]
 }
 
+// Chapter model
 model Chapter {
-  id            String         @id @default(cuid())
-  title         String
-  content       String
-  orderIndex    Int
-  audiobookId   String
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  id          String        @id @default(cuid())
+  title       String
+  content     String        @db.Text
+  orderIndex  Int
+  audiobook   Audiobook     @relation(fields: [audiobookId], references: [id], onDelete: Cascade)
+  audiobookId String
   audioSegments AudioSegment[]
-  audiobook     Audiobook      @relation(fields: [audiobookId], references: [id], onDelete: Cascade)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
 
   @@index([audiobookId])
   @@index([orderIndex])
 }
 
+// AudioSegment model for storing generated audio
 model AudioSegment {
-  id          String   @id @default(cuid())
-  voiceId     String
-  audioUrl    String?
-  startTime   Float
-  endTime     Float
-  textSegment String
+  id          String    @id @default(cuid())
+  voiceId     String    // ElevenLabs voice ID
+  audioUrl    String?   // URL to stored audio file
+  startTime   Float     // Start time in seconds
+  endTime     Float     // End time in seconds
+  textSegment String    @db.Text // The text segment this audio corresponds to
+  chapter     Chapter   @relation(fields: [chapterId], references: [id], onDelete: Cascade)
   chapterId   String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  chapter     Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   @@index([chapterId])
   @@index([voiceId])
 }
 
+// UserPreference model for storing user settings
 model UserPreference {
-  id              String   @id @default(cuid())
-  userId          String   @unique
-  selectedVoiceId String
-  playbackSpeed   Float    @default(1.0)
-  volume          Float    @default(0.7)
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id              String    @id @default(cuid())
+  userId          String    @unique // User ID from auth system
+  selectedVoiceId String    // Default ElevenLabs voice ID
+  playbackSpeed   Float     @default(1.0)
+  volume          Float     @default(0.7)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 
   @@index([userId])
 }

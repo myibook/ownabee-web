@@ -1,5 +1,5 @@
-import { PrismaClient } from '../src/generated/prisma';
-import { chapterContents } from './data/audiobook-content';
+import { PrismaClient } from '@prisma/client';
+const { chapterContents } = require('./data/audiobook-content');
 
 // For debugging
 console.log(`Found ${chapterContents.length} chapters to seed`);
