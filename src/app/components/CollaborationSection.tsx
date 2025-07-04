@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { useTranslation } from '../i18n/TranslationContext';
 import { Users, Check, Mail, Phone } from './ui/icons';
 
@@ -121,7 +122,11 @@ const CollaborationSection: React.FC = () => {
                 {/* Collaboration illustration with Next.js Image component for optimization */}
                 <div className="relative w-full h-full p-6 md:p-8">
                   <div className="flex items-center justify-center w-full h-full">
-                    <Users size={180} className="text-primary" aria-hidden="true" />
+                    <Image src="/images/joining-storyteller.png" 
+                    alt="Collaboration illustration" 
+                    width={520} 
+                    height={520} 
+                    />
                   </div>
                 </div>
                 <div className="absolute bottom-6 md:bottom-8 left-0 right-0 text-center bg-white/80 mx-6 md:mx-8 py-3 rounded-lg shadow-sm">
