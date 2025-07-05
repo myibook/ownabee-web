@@ -5,8 +5,8 @@ import { ElevenLabsClient } from "@elevenlabs/elevenlabs-js";
 const API_KEY = 'sk_9ac848590f82edc99d16bfad44e6be2da0517ed54b63335e';
 const client = new ElevenLabsClient({ apiKey: API_KEY });
 
-// Available voices
-export const AVAILABLE_VOICES = [    
+// Available voices (not exported, used internally)
+const AVAILABLE_VOICES = [    
   { id: 'ZT9u07TYPVl83ejeLakq', name: 'Rachel (Default)' },
   { id: '5TZtQYDIn8M40udRnoVI', name: 'Dee - Australian' },
   { id: 'XJ2fW4ybq7HouelYYGcL', name: 'Cherry Twinkle – Adorable Cartoon Girl' },

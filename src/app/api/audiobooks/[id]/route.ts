@@ -2,14 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '../../../lib/prisma';
 
 // GET /api/audiobooks/[id] - Get a specific audiobook with chapters
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: NextRequest) {
+  // Extract id from the URL path
+  const url = new URL(request.url);
+  const pathParts = url.pathname.split('/');
+  const id = pathParts[pathParts.indexOf('audiobooks') + 1];
+  
   try {
     const audiobook = await prisma.audiobook.findUnique({
       where: {
-        id: params.id,
+        id: id,
       },
       include: {
         chapters: {
@@ -32,7 +34,7 @@ export async function GET(
 
     return NextResponse.json(audiobook);
   } catch (error) {
-    console.error(`Error fetching audiobook ${params.id}:`, error);
+    console.error(`Error fetching audiobook ${id}:`, error);
     return NextResponse.json(
       { error: 'Failed to fetch audiobook' },
       { status: 500 }
@@ -41,17 +43,19 @@ export async function GET(
 }
 
 // PUT /api/audiobooks/[id] - Update an audiobook
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function PUT(request: NextRequest) {
+  // Extract id from the URL path
+  const url = new URL(request.url);
+  const pathParts = url.pathname.split('/');
+  const id = pathParts[pathParts.indexOf('audiobooks') + 1];
+  
   try {
     const body = await request.json();
     const { title, author, coverImage, description } = body;
 
     const audiobook = await prisma.audiobook.update({
       where: {
-        id: params.id,
+        id: id,
       },
       data: {
         title,
@@ -63,7 +67,7 @@ export async function PUT(
 
     return NextResponse.json(audiobook);
   } catch (error) {
-    console.error(`Error updating audiobook ${params.id}:`, error);
+    console.error(`Error updating audiobook ${id}:`, error);
     return NextResponse.json(
       { error: 'Failed to update audiobook' },
       { status: 500 }
@@ -72,20 +76,22 @@ export async function PUT(
 }
 
 // DELETE /api/audiobooks/[id] - Delete an audiobook
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function DELETE(request: NextRequest) {
+  // Extract id from the URL path
+  const url = new URL(request.url);
+  const pathParts = url.pathname.split('/');
+  const id = pathParts[pathParts.indexOf('audiobooks') + 1];
+  
   try {
     await prisma.audiobook.delete({
       where: {
-        id: params.id,
+        id: id,
       },
     });
 
     return new NextResponse(null, { status: 204 });
   } catch (error) {
-    console.error(`Error deleting audiobook ${params.id}:`, error);
+    console.error(`Error deleting audiobook ${id}:`, error);
     return NextResponse.json(
       { error: 'Failed to delete audiobook' },
       { status: 500 }
