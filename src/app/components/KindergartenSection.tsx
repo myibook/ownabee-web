@@ -17,7 +17,7 @@ const KindergartenSection: React.FC = () => {
       title: t('kindergarten.reason1'),
       description: t('kindergarten.description1'),
       icon: (
-        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current" role="img" aria-hidden="true">
           <Brain className="w-full h-full" strokeWidth={2} />
         </div>
       )
@@ -26,7 +26,7 @@ const KindergartenSection: React.FC = () => {
       title: t('kindergarten.reason2'),
       description: t('kindergarten.description2'),
       icon: (
-        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current" role="img" aria-hidden="true">
           <Heart className="w-full h-full" strokeWidth={2} />
         </div>
       )
@@ -35,7 +35,7 @@ const KindergartenSection: React.FC = () => {
       title: t('kindergarten.reason3'),
       description: t('kindergarten.description3'),
       icon: (
-        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current" role="img" aria-hidden="true">
           <Sparkles className="w-full h-full" strokeWidth={2} />
         </div>
       )

@@ -53,7 +53,7 @@ const AudiobookSection: React.FC = () => {
     return {
       ...feature,
       icon: (
-        <div className="w-12 h-12 text-current" role="img" aria-hidden="true">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current" role="img" aria-hidden="true">
           <span className="sr-only">{feature.iconTitle}</span>
           <IconComponent className="w-full h-full" strokeWidth={2} />
         </div>
