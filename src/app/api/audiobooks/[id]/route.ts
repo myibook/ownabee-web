@@ -88,7 +88,7 @@ export async function DELETE(
       },
     });
 
-    return new NextResponse(null, { status: 204 });
+    return NextResponse.json({ success: true });
   } catch (error) {
     const { id } = await params;
     console.error(`Error deleting audiobook ${id}:`, error);
