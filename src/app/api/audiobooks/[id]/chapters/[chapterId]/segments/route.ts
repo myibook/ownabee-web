@@ -2,12 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '../../../../../../lib/prisma';
 
 // GET /api/audiobooks/[id]/chapters/[chapterId]/segments - Get all audio segments for a chapter
-export async function GET(request: NextRequest) {
-  // Extract params from the URL path
-  const url = new URL(request.url);
-  const pathParts = url.pathname.split('/');
-  const id = pathParts[pathParts.indexOf('audiobooks') + 1];
-  const chapterId = pathParts[pathParts.indexOf('chapters') + 1];
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string; chapterId: string }> }
+) {
+  const { id, chapterId } = await params;
 
   try {
     const audioSegments = await prisma.audioSegment.findMany({
@@ -30,12 +29,11 @@ export async function GET(request: NextRequest) {
 }
 
 // POST /api/audiobooks/[id]/chapters/[chapterId]/segments - Create a new audio segment
-export async function POST(request: NextRequest) {
-  // Extract params from the URL path
-  const url = new URL(request.url);
-  const pathParts = url.pathname.split('/');
-  const id = pathParts[pathParts.indexOf('audiobooks') + 1];
-  const chapterId = pathParts[pathParts.indexOf('chapters') + 1];
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string; chapterId: string }> }
+) {
+  const { id, chapterId } = await params;
   
   try {
     const body = await request.json();

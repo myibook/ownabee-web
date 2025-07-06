@@ -6,7 +6,7 @@ const API_KEY = 'sk_9ac848590f82edc99d16bfad44e6be2da0517ed54b63335e';
 const client = new ElevenLabsClient({ apiKey: API_KEY });
 
 // Available voices
-export const AVAILABLE_VOICES = [    
+const AVAILABLE_VOICES = [    
   { id: 'ZT9u07TYPVl83ejeLakq', name: 'Rachel (Default)' },
   { id: '5TZtQYDIn8M40udRnoVI', name: 'Dee - Australian' },
   { id: 'XJ2fW4ybq7HouelYYGcL', name: 'Cherry Twinkle – Adorable Cartoon Girl' },
@@ -18,9 +18,8 @@ export const AVAILABLE_VOICES = [
  */
 export async function GET() {
   try {
-    // Use the client to get voices
-    const voices = await client.voices.getAll();
-    return NextResponse.json({ voices });
+    // Return our predefined list of voices instead of fetching from API
+    return NextResponse.json({ voices: AVAILABLE_VOICES });
   } catch (error) {
     console.error('Error fetching voices:', error);
     return NextResponse.json({ error: 'Failed to fetch voices' }, { status: 500 });
